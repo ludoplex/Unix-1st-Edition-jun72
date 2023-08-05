@@ -132,7 +132,7 @@ def uMode(s) :
 ps = re.sub("[ \t]+", " ", rawperms)
 ps = filter(None, ps.split("\n"))
 ps = [p.split(' ') for p in ps]
-perms = dict((p[7], (uMode(p[0]), int(p[1]))) for p in ps)
+perms = {p[7]: (uMode(p[0]), int(p[1])) for p in ps}
 
 def pad(d) :
     "pad to 512-byte boundary"
